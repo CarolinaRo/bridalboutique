@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <link rel="stylesheet" href="../assets/css/estilo.css">
+    <link rel="stylesheet" href="../assets/css/estilo2.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lovers+Quarrel&family=Quicksand:wght@500&display=swap" rel="stylesheet">
+    
+    <title> Galería de productos</title>
+    <meta name="description" content="Galería de nuestros productos">
+    <meta name="keywords" content= "COLECCIONES, VESTIDOS, TOCADOS, RAMOS, SALDOS, VESTIDOS DE NOVIA">
+</head>
+
+<body id="body-gal">
+    <div class="main">
+
+    <h1 class="marca">Bridal Boutique</h1>
+    <div>
+        <p> Acá estan las cosas más básicas que ofrecemos,
+            queremos asegurarnos de que tu eleccion sea única...
+            Si viste algo que te gustó no dudes en contactactarnos
+            Te estamos esperando siempre!
+        </p>
+    </div>
+    <hr>
+    <h2>Productos</h2>
+    
+    <div id="myBtnContainer">
+      <button class="btn active" onclick="filterSelection('all')"> Ver todo</button>
+      <button class="btn" onclick="filterSelection('tocados')"> Tocados</button>
+      <button class="btn" onclick="filterSelection('accesorios')"> Accesorios</button>
+      <button class="btn" onclick="filterSelection('vestidos')"> Vestidos</button>
+    </div>
+    
+    
+<div class="row">
+      <div class="column tocados">
+        <div class="content">
+          <img src="../images/tocados/1.png" alt="Apnea" style="width:100%">
+          <h2>Tocado Apnea</h2>
+          <p>De flores naturales 100% a mano.</p>
+        </div>
+      </div>
+      <div class="column tocados">
+        <div class="content">
+        <img src="../images/tocados/2.png" alt="Silver" style="width:100%">
+          <h2>Tocado Silver</h2>
+          <p>Hecho en pedrería swarowski y plata 925.</p>
+        </div>
+      </div>
+      <div class="column tocados">
+        <div class="content">
+        <img src="../images/tocados/3.png" alt="Gold" style="width:100%">
+          <h2>Tocado Gold</h2>
+          <p> Enchapado en oro con piedras preciosas.</p>
+        </div>
+      </div>
+      
+      <div class="column accesorios">
+        <div class="content">
+          <img src="../images/ramos/1.png" alt="Fresh" style="width:100%">
+          <h2>Fresh</h2>
+          <p> Flores de campo que más te gusten.</p>
+        </div>
+      </div>
+      <div class="column accesorios">
+        <div class="content">
+        <img src="../images/ramos/2.png" alt="Rose" style="width:100%">
+          <h2>Rose</h2>
+          <p> Ramo clásico de rosas rojas.</p>
+        </div>
+      </div>
+      <div class="column accesorios">
+        <div class="content">
+        <img src="../images/ramos/3.png" alt="Cala" style="width:100%">
+          <h2>Cala</h2>
+          <p> En tonos calidos, flores vivas y secas.</p>
+        </div>
+      </div>
+    
+      <div class="column dress">
+        <div class="content">
+          <img src="../images/dress/1.png" alt="Saldos" style="width:100%">
+          <h2>Discontinuos</h2>
+          <p>Vestidos de temporadas anteriores. %OFF en tiendas!</p>
+        </div>
+      </div>
+      <div class="column dress">
+        <div class="content">
+        <img src="../images/dress/2.png" alt="newtemp" style="width:100%">
+          <h2>Colección sweet</h2>
+          <p>2021, inspirada en Milano, Italia. Pedí tu cita con una asesora!</p>
+        </div>
+      </div>
+      <div class="column dress">
+        <div class="content">
+        <img src="../images/dress/3.png" alt="pedrería" style="width:100%">
+          <h2>Vestidos con Pedrería</h2>
+          <p> Bordados a mano, con amor y exclusividad, siempre.</p>
+        </div>
+      </div>
+    </div>
+    
+</div>
+    
+    <script>
+    filterSelection("all")
+    function filterSelection(c) {
+      var x, i;
+      x = document.getElementsByClassName("column");
+      if (c == "all") c = "";
+      for (i = 0; i < x.length; i++) {
+        w3RemoveClass(x[i], "show");
+        if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+      }
+    }
+    
+    function w3AddClass(element, name) {
+      var i, arr1, arr2;
+      arr1 = element.className.split(" ");
+      arr2 = name.split(" ");
+      for (i = 0; i < arr2.length; i++) {
+        if (arr1.indexOf(arr2[i]) == -1) {element.className += " " + arr2[i];}
+      }
+    }
+    
+    function w3RemoveClass(element, name) {
+      var i, arr1, arr2;
+      arr1 = element.className.split(" ");
+      arr2 = name.split(" ");
+      for (i = 0; i < arr2.length; i++) {
+        while (arr1.indexOf(arr2[i]) > -1) {
+          arr1.splice(arr1.indexOf(arr2[i]), 1);     
+        }
+      }
+      element.className = arr1.join(" ");
+    }
+    
+    var btnContainer = document.getElementById("myBtnContainer");
+    var btns = btnContainer.getElementsByClassName("btn");
+    for (var i = 0; i < btns.length; i++) {
+      btns[i].addEventListener("click", function(){
+        var current = document.getElementsByClassName("active");
+        current[0].className = current[0].className.replace(" active", "");
+        this.className += " active";
+      });
+    }
+    </script>
+    
+<footer class="final">
+                
+     <a href="./colecciones.html">
+      <img class="logo" src="../images/logo2.png" alt=""></a>
+    <a class="atras" href="../views/colecciones.html">- Volver atrás -</a>
+    <br>
+    <li> <img class="rrss" src="../images/footer/msg.png" alt=""> hola@bridalboutique.com.lam</li>
+    <p id="foot-text">- Powered by Carolina Robles- Copyright 2021 © Evergold, Todos los derechos reservados - </p>
+        
+</footer>
+    
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF" crossorigin="anonymous"></script>
+    
+</body>
+</html>
