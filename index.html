@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
     <link rel="stylesheet" href="./assets/css/estilo.css">
-    <link rel="stylesheet" href="./assets/css/estilo2.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Lovers+Quarrel&family=Quicksand:wght@500&display=swap" rel="stylesheet">
 
@@ -21,47 +20,71 @@
         <ul class="opciones">
         <li> <img src="./images/redes.png" height="40px" width="auto" alt=""> </li>
         <li><a href="./index.html"> <h2>Home</h2></a></li>
-        <li><a href="./views/nosotros.html"> <h2>Nosotros</h2></a> </li>
+        <li><a href="./views/nosotras.html"> <h2>Nosotras</h2></a> </li>
         <li><a href="./views/contacto.html"> <h2>Contacto</h2></a> </li>
-        <li><a href="./views/shop.html"><h2>Shops</h2></a> </li>
-        <li><a href="./views/tablaDeTalles.html"><h2>Tabla de Talles</h2></a> </li>
+        <li><a href="./views/colecciones.html"><h2>Colecciones</h2> </a></li>
+        <li><a href="./views/preguntas.html"><h2>Preguntas frecuentes</h2></a> </li>
         </ul>     
     </nav>
 <div class="banner">
-    <li> <img class="logoB" src="./images/logo.png"  alt=""> </li>
+    <li> <img class="logoB" src="../bridalboutique/images/logo.png"  alt=""> </li>
     <div id="textobanner" >
         
-        <p>¡Qué bueno que ya llegaste!</p>
+        <p id="princ">¡Qué bueno que ya llegaste!</p>
     </div>
 </div>
 
 <main id="tendencias">
-    <div class="tUno">
-        <div class="tUno-texto"> <h1 class="coleccion"> Coleccion Sweet</h1>
-            <p> Milano, Italy - Inspiration 2021</p>
-            <a class="btn btn-primary btn-lg" href="#" role="button"> Quiero más info!</a>
-        </div>
-        <div class="imgdiv"> <center><video src="./videos/boda-comprimida.mp4" autoplay muted loop width="70%" height="auto"></video></center> </div>
+
+    <div><h1 class="marca" > Bridal Boutique</h1>
+        <p>Entre un prado verde, flores y aroma de campo en las afueras de Milano, Italia, creamos esta nueva colección para que te sientas única.
+        ¿Por qué siempre blanco? Creemos en ir más allá de lo clásico, en esta nueva temporada, nuestra diseñadora se centró
+        en los colores nude, rosas, colores claros y de contraste. Como siempre, pedrería bordada, y las mejores telas aguardan por vos...
+        </p>
+        <div class="tUno-texto"> <a href="../bridalboutique/views/colecciones.html"> <h1 class="coleccion" > Coleccion Sweet</h1> ¡Mirá nuestras colecciones! </a></div>
+
+        <div class="imgdiv"> <center><video id="video" src="./videos/boda-comprimida.mp4" autoplay muted loop ></video></center></div>
+    
     </div>
 </main>
 
-<section class="f-redes" ><!--ACA TENGO QUE AGREGAR 3 CIRCULOS CON RRSS-->
+<section id="serv">
+    <div class="sv"><a href="../bridalboutique/views/preguntas.html"><img class="servicio" src="../bridalboutique/images/serv/ent.png" alt=""></a><h3>Envíos a todo el país</h3> <h4>Consultá las zonas.</h4></div> 
+    <div class="sv"><a href="../bridalboutique/views/preguntas.html"><img class="servicio" src="../bridalboutique/images/serv/sec.png" alt=""></a><h3>¡Comprá tranquila!</h3> <h4>Estás un sitio seguro.</h4></div> 
+    <div class="sv"><a href="../bridalboutique/views/preguntas.html"><img class="servicio" src="../bridalboutique/images/serv/dev.png" alt=""></a><h3>Encontrá tu paquete</h3> <h4>Realizá el seguimiento.</h4></div> 
+</section>
+
+<section class="desc">
+    <h1 class="desc__texto"> ~ Pensamos siempre en darte lo mejor ~</h1>
+    <form action="#" method="post" accept-charset="utf-8">
+		<p class="text"> ¡Dejanos tu mail y disfrutá de descuentos únicos</p>
+		<p>
+			<input type="text" name="email" style="width: 95%; padding: 1px 2px" placeholder=" dejanos acá tu mail" value="" id="subscribe-field">
+		</p>
+
+		<p>
+			<input class="boton" type="submit" value="Enviar!">
+		</p>
+	</form>
+</section>
+
+<section class="f-redes" >
 
     <ul class="cont-redes">
-        <li> <img class="rrss" src="./images/footer/3.png" alt=""></li>
-        <li> <img class="rrss" src="./images/footer/4.png" alt=""></li>
-        <li> <img class="rrss" src="./images/footer/5.png" alt=""></li>
-        <li> <img class="rrss" src="./images/footer/6.png" alt=""></li>
+        <li> <a href="https://www.facebook.com/"> <img class="rrss" src="./images/footer/3.png" alt=""> </a></li>
+        <li> <a href="https://www.instagram.com/accounts/login/"> <img class="rrss" src="./images/footer/4.png" alt=""> </a></li>
+        <li> <a href="https://ar.pinterest.com/search/pins/?q=vestidos%20de%20novia&rs=typed&term_meta[]=vestidos%7Ctyped&term_meta[]=de%7Ctyped&term_meta[]=novia%7Ctyped"> <img class="rrss" src="./images/footer/6.png" alt=""> </a></li>
     </ul>
 
 </section>
+
 <footer class="final"> 
             
     <a href="index.html">
     <img class="logo" src="./images/logo2.png" height="25px" alt=""></a>
     <br>
     <li> <img class="rrss" src="./images/footer/msg.png" alt=""> hola@bridalboutique.com.lam</li>
-    <p id="foot-text">- Powered by Carolina Robles- Copyright 2021 © Evergold, Todos los derechos reservados - </p>
+    <p id="foot-text">- Powered by Carolina Robles- Copyright 2021 © - Todos los derechos reservados - </p>
 
 </footer>
 
