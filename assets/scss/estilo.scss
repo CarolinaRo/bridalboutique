@@ -19,6 +19,18 @@ body{
   height: 100%;
 }
 
+@media only screen and (max-width: 768px) { 
+  .opciones{
+    flex-direction: column;
+  }
+}
+
+@media only screen and (max-width: 320px) { 
+  .opciones{
+    flex-direction: column;
+  }
+}
+
 .banner{
   background-image: url(../../images/banner/index.png);
   height: auto;
@@ -64,7 +76,6 @@ body{
 #princ{
   letter-spacing: 5px;
   font-size: 20px;
-
 }
 
 #tendencias{
@@ -138,7 +149,7 @@ a:hover{
 }
 
 #video{
-  width: 65%;
+  width: 73%;
   height: auto;
   margin-bottom: 15px;
 }
@@ -151,7 +162,7 @@ a:hover{
     font-family: 'Times New Roman', Times, serif;
     text-align: center;
     color: black;
-    font-size: 35px;
+    font-size: 30px;
     letter-spacing: 5px;
     text-decoration: none;
     
@@ -221,16 +232,16 @@ ul{
   display: inline-flex;
   flex-direction: column-reverse;
   font-family: inherit;
-  font-size: 20px;
+  font-size: 15px;
   text-align: center;
 }
 
 #locales{
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: space-around;
   flex-wrap: wrap;
-  margin: 15px;
+  margin: 12px;
 }
 
 #msj{
@@ -304,23 +315,14 @@ p{
   font-size: 15px;
   text-align: end;
 }
-
-/*
-.contenedorDos{
-    height: auto;
-    display: grid;
-    grid-template-rows: 30% 7% 40% 7%;
-    grid-template-columns: 100%;
-    grid-template-areas:
-                        "header"
-                        "menu"
-                        "contenido"
-                        "footer";
-  }*/
   
 #formulario{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
   text-align: center;
-  margin: 1%;
+  margin: 3%;
+  font-size: 0.8rem;
 }
   
 li{
@@ -345,6 +347,10 @@ legend{
   font-size: 25px;  
 }
 
+#fix{
+  margin-top: 19px;
+}
+
 .textoP{
   text-align: justify;
 }
@@ -358,7 +364,7 @@ legend{
 }
 
 .servicio{
-  height: 25vh;
+  height: 20vh;
   max-width: -webkit-fill-available;
   margin: 1%;
 }
@@ -409,7 +415,6 @@ legend{
   margin: 3%;
 }
 
-/*ESTO PUEDE SALIR MAL*/
 *{
   box-sizing: border-box;
 }
@@ -429,7 +434,6 @@ legend{
   margin: 10px -16px;
 }
 
-.row,
 .row > .column {
   padding: 8px;
 }
@@ -437,7 +441,7 @@ legend{
 .column {
   float: left;
   width: 33.33%;
-  display: none; /* Hide all elements by default */
+  display: none; 
 }
 
 .row:after {
@@ -472,3 +476,35 @@ legend{
   background-color: black;
   color: #AB8E5D;
 }
+
+/* media queries para seccion colecciones!*/
+@media only screen and (max-width: 1309px){
+  .galeria{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+
+  #hor{
+    width: 300px;
+    height: 200px;
+  }
+
+  #pos{
+    text-align: center;
+  }
+}
+
+@media only screen and (max-width: 320px) { 
+  .galeria{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+
+  #hor {
+    width: 300px;
+    height: 200px;
+  }
+}
+

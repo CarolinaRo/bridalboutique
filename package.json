@@ -14,5 +14,13 @@
     "nodemon": "^2.0.7"
   },
   "dependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CarolinaRo/bridalboutique.git"
+  },
+  "bugs": {
+    "url": "https://github.com/CarolinaRo/bridalboutique/issues"
+  },
+  "homepage": "https://github.com/CarolinaRo/bridalboutique#readme",
   "description": ""
 }
